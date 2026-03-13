@@ -1,0 +1,15 @@
+implenting maven project.
+and generating package by giving command
+mvn package
+demomnstrating github webhook
+demonstrating poll scm
+abc
+xyz
+implementing github webhook
+one more try
+
+
+hello alll
+demonstarting poll scm
+
+triggering the pipeline
