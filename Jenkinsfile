@@ -1,13 +1,19 @@
-node {
-  stage('cloning maven project') {
-    git 'https://github.com/AMANKUMARARYA0/maven.git'
-  }
+pipeline {
+    agent any
 
-  stage('Building maven project') {
-    sh 'mvn package'
-  }
+    stages {
 
-  stage('print') {
-    echo "Hi, my name is Aman"
-  }
+        stage('cloning maven project') {
+            steps {
+                git branch: 'main', url: 'https://github.com/AMANKUMARARYA0/maven.git'
+            }
+        }
+
+        stage('build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+
+    }
 }
